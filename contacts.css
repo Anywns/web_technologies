@@ -119,3 +119,21 @@ body {
   object-fit: contain;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;       
+  text-decoration: none;
+}
+
+.logo img {
+  width: 60px;             
+  height: auto;
+  border-radius: 8px;      
+  transition: transform 0.2s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);   
+}
