@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 200px 0px;
+    width: 100%;
+}
+
+.tbl {
+    background-image: url('table_background.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 80%;
+    max-width: 900px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.tbl td {
+    background-color: rgba(121, 121, 121, 0.579);
+    backdrop-filter: blur(7px);
+}
+
+.arrow {
+    font-size: 40px;
+}
+
+.tbl {
+    width: 80%;
+    table-layout: fixed; 
+}
+
+.tbl .first_row {
+    height: 100px; 
+    text-align: center;
+    padding: 15px;
+    background-image: url(background_first_row.jpg);
+    background-size: contain;
+    
+}
+
+.tbl .info td {
+    width: 33.33%;
+    height: 80px; 
+    text-align: center;
+    padding: 15px;
+    vertical-align: middle; 
+}
+
+.tbl .more_info td {
+    height: 60px;
+    text-align: center;
+    padding: 10px;
+}
+
+.tbl p {
+    margin: 0;
+    
+}
+
+.tbl tr:first-child p {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1b1d1c;
+}
+
+.tbl .info p {
+    font-size: 16px;
+    color: #edefee;
+}
+
+.tbl .more_info p {
+    font-size: 14px;
+    color: #edefee;
+    cursor: pointer;
+}
+
+.tbl .more_info p:hover {
+    color: #aebcb5;
+}
+
+.arrow {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.info-link {
+    display: block;
+    text-decoration: none;
+    color: #edefee;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px;
+    transition: all 0.3s ease;
+    background-color: transparent
+}
+
+.info-link:hover {
+    color: #aebcb5;
+    background-color: transparent;
+}
+
+.info-link .arrow {
+    font-size: 18px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info-link:hover .arrow {
+    transform: translateX(30px);
+}
+
+.tbl .more_info .preview-link img {
+    display: inline-block !important;
+    margin-top: 0 !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 5px;
+}

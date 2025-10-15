@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паспортные данные</title>
+    <link rel="stylesheet" href="passport.css">
+    </head>
+<body>
+    <header>
+        <h1>Работа с паспортными данными</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#page-change" id="nav-change" class="nav-link active">Изменяем кириллицу на латиницу по клику</a></li>
+            <li><a href="#page-dom" id="nav-dom" class="nav-link">DOM_JS. Считываем информацию из DOM</a></li>
+            <li><a href="tasks.html" id="nav-tasks" class="nav-link" target="_blank">Решение алгоритмической задачи</a></li>
+        </ul>
+    </nav>
+    
+    <div class="first_tasks" id="page-change">
+        <h3>ИЗМЕНЕНЯЕМ КИРИЛЛИЦУ НА ЛАТИНИЦУ ПО КЛИКУ</h3>
+        <div class="passport" id="passport">
+            
+            <p class="issued passport_text" id="issued">УМВД РОССИИ ПО ОРЕНБУРГСКОЙ ОБЛАСТИ</p>
+            <p class="issued_date passport_text">12.12.2012</p>
+            <p class="unit_code passport_text">111-222</p>
+            <img src="подпись1.png" alt="" class="pd1">
+            <img src="подпись2.png" alt="" class="pd2">
+            <p class="surname passport_text">ОГЕЙ</p>
+            <p class="name passport_text">АННА</p>
+            <p class="patronymic passport_text">СЕРГЕЕВНА</p>
+            <p class="gender passport_text">ЖЕН</p>
+            <p class="birthday passport_text">24.12.2005</p>
+            <p class="city passport_text">Г. ОРЕНБУРГ</p>
+            <p class="area passport_text">ОРЕНБУРГСКАЯ ОБЛАСТЬ</p>
+            <img src="passport_photo.jpg" alt="passport_photo.jpg" class="personal_photo">
+        </div>
+        <button type="button" class="button" id="change-btn">Click to show English version</button>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <div class="second_tasks" id="page-dom">
+        <h3>DOM_JS. СЧИТЫВАЕМ ИНФОРМАЦИЮ ИЗ DOM</h3>
+        <figure>
+            <a href="dom_js.png" target="_blank"> <img src="dom_js.png" alt="dom_js.png" class="screen"></a>
+            <figcaption>считывание информации из DOM</figcaption>
+        </figure>
+        
+    </div>
+
+    <script src="passport.js"></script>
+</body>
+</html>

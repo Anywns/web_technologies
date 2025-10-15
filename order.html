@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    
+    <link rel="stylesheet" href="order.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header class="site_header">
+        <div class="container">
+            <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li class="active"><a href="order.html">Заказ</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            </nav>
+        </div>
+        </header> 
+    </div>    
+
+    <main class="forms">
+        <div class="form_container">
+
+        <div class="form_1">
+
+            <h3>ЛИЧНАЯ ИНФОРМАЦИЯ</h3>
+            <p>(форма для отправки личных контактных данных)</p>
+            <form action="https://yandex.com/search?" target="_blank" id="data" name="data">
+                <div class="group_1">
+
+                <label for="lastname">Фамилия:</label>
+                <input type="text" id="lastname" name="lastname"  placeholder="Иванов" required >
+
+                <label for="firstname">Имя:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Иван" required>
+
+                <label for="middlename">Отчество:</label>
+                <input type="text" id="middlename" name="middlename" placeholder="Иванович" required>
+
+            </div>
+
+            <div class="group_2">
+
+                <label for="age">Возраст</label>
+                <input type="number" id="age" name="age" placeholder="33" min="18" max="100" required>
+
+                <label for="email">Электронная почта</label>
+                <input type="email" name="email" id="email" placeholder="example@yandex.ru" required>
+
+                <label for="phone-number">Номер телефона</label>
+                <input type="tel" name="phone-number" id="phone-number" placeholder="+7-920-986-13-13" required>
+
+                <label for="user_password">Пароль:</label>
+                <input type="password" id="user_password" name="user_password">
+
+            </div>
+
+            <input type="hidden" name="submission_date" value="2024-01-01">
+            
+            <button type="submit" class="submit-btn">Отправить данные</button>
+
+            </form>
+            
+        </div>
+
+        <div class="form_2">
+            <h3>ОФОРМЛЕНИЕ ЗАКАЗА ТУРА</h3>
+            <p class="f2title">(форма для отправки оригинальных данных)</p>
+            <form action="https://yandex.com/search?" target="_blank" id="data" name="data">
+                <label for="tour_name">Название тура или направление:</label>
+                <input type="text" id="tour_name" name="tour_name" required>
+
+        
+                <label for="adults_count">Количество человек:</label>
+                <input type="number" id="adults_count" name="adults_count" min="1" max="10" placeholder="1" required>
+
+                <!-- Radio -->
+                <p>Тип размещения:</p>
+                <label>
+                    <input type="radio" name="room_type" value="single" required> Одноместный
+                </label><br>
+                <label>
+                    <input type="radio" name="room_type" value="double"> Двухместный
+                </label><br>
+                <label>
+                    <input type="radio" name="room_type" value="triple"> Трехместный
+                </label>
+                <br>
+            
+            <!-- Checkbox -->
+                <div class="options">
+                    <p>Дополнительные услуги:</p>
+                    <label>
+                        <input type="checkbox" name="extra_services[]" value="insurance"> Страховка
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extra_services[]" value="transfer"> Трансфер
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extra_services[]" value="excursions"> Экскурсии
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extra_services[]" value="vip_lounge"> VIP-зал
+                    </label>
+                </div>
+
+                <div class="dates">
+                    <label for="departure_date">Дата вылета:</label>
+                    <input type="date" id="departure_date" name="departure_date" required>
+
+                    <label for="return_date">Дата возвращения:</label>
+                    <input type="date" id="return_date" name="return_date" required>
+                </div>
+
+                <div class="wishes">
+                    <label for="wishes">Ваши пожелания:</label>
+                <textarea id="wishes" name="wishes" rows="4" cols="50" placeholder="Введите ваши пожелания или комментарии..."></textarea>
+                </div>
+                
+
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+
+        </div>
+    </main>
+    
+</body>
+</html>

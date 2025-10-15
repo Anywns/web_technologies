@@ -1,0 +1,306 @@
+/* -------------------------
+   Очищенный CSS (объединённый)
+   ------------------------- */
+
+/* Базовый сброс и модель коробки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основные настройки страницы */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Oswald', sans-serif; /* основной шрифт */
+  font-size: 20px;
+  background: linear-gradient(135deg, #8B8D89 0%, #262726 100%);
+  min-height: 800px;
+  padding: 25px 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: inherit;
+}
+
+/* Шапка */
+header {
+  background-color: #3a403a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Навигация (липкая) */
+nav {
+  background-color: #626b62ab; /* 8-символьный hex с альфой (modern browsers) */
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav li { margin: 0; }
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  background-color: #7b847b;
+  transform: translateY(-2px);
+}
+
+/* Активный пункт меню */
+.active {
+  background-color: #7b847b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Общие контейнеры секций */
+.first_tasks,
+.second_tasks,
+.algorithm_tasks {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 80vh;
+}
+
+/* Уточнённый контейнер задач (внутренний блок) */
+.algorithm_tasks .task-content,
+.algorithm_tasks .task-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Пространственный разделитель (пустой блок) */
+.section-spacer {
+  height: 100px;
+  width: 100%;
+}
+
+/* Паспорт (фон + абсолютные элементы поверх) */
+.passport {
+  background-image: url(passport.png.jpg); /* проверь корректность пути/имени файла */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  max-width: 900px;
+  height: 750px;
+  position: relative;
+  margin: 40px auto;
+}
+
+/* Текст в паспорте (общий) */
+.passport_text {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Позиционирование полей поверх паспорта (используют проценты) */
+.issued { position: absolute; top: 10.2%; left: 28.6%; }
+.issued_date { position: absolute; top: 22%; left: 26%; letter-spacing: 0; }
+.unit_code { position: absolute; top: 22%; left: 58%; }
+.signature { height: 100px; position: absolute; top: 26%; left: 18.3%; }
+.my-signature { height: 55px; position: absolute; top: 33.5%; left: 63.5%; }
+.surname { position: absolute; top: 56.7%; left: 53%; }
+.name { position: absolute; top: 64.7%; left: 55%; }
+.patronymic { position: absolute; top: 68.5%; left: 51%; }
+.gender { position: absolute; top: 72.4%; left: 43.5%; }
+.birthday { position: absolute; top: 72.4%; left: 57%; letter-spacing: 0; }
+.city { position: absolute; top: 76%; left: 51%; }
+.area { position: absolute; top: 80%; left: 47.5%; }
+.passport .pd2 { height: 150px; position: absolute; top: 23%; left: 23.3%; }
+.passport .pd1 { height: 150px; position: absolute; top: 25%; left: 60.5%; }
+
+/* Фото */
+.personal_photo {
+  position: absolute;
+  top: 60.9%;
+  left: 24.4%;
+  height: 182px;
+  width: 130px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #ddd;
+}
+
+/* Заголовки */
+h3 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* Кнопки */
+.button {
+  background-color: #2a2f33;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  margin: 40px auto;
+  display: block;
+  transition: all 0.3s;
+}
+.button:hover {
+  background-color: #1a1f23;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Снимок / скрин (универсально) */
+.screen {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Фигуры в секции second_tasks */
+.second_tasks figure {
+  margin: 40px auto;
+  text-align: center;
+  max-width: 90%;
+}
+.second_tasks figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+/* Блок формулы задачи */
+.task-formula {
+  text-align: left;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.task-formula h4 {
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.task-formula p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Секция ввода (единственное определение) */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0;
+  align-items: center;
+}
+.input-section label {
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+/* Поля ввода (одно определение, ширина 300px) */
+.input-section input {
+  padding: 12px;
+  border: 2px solid #626b62;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  transition: border-color 0.3s;
+}
+.input-section input:focus {
+  border-color: #7b847b;
+  outline: none;
+}
+
+/* Поле результата (единственное определение) */
+.result-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  min-height: 80px;
+  white-space: pre-line; /* сохраняет переносы строки в тексте результата */
+}
+.result-section h4 {
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.result-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Статусы */
+.success {
+  color: #4CAF50;
+  font-weight: bold;
+}
+.error {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* Блок шагов расчёта */
+.calculation-steps {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  text-align: left;
+}
+.calculation-steps h4 {
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+.step {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border-left: 4px solid #7b847b;
+}
+.step p { margin-bottom: 8px; line-height: 1.4; }
+.step strong { color: #e0e0e0; }
+

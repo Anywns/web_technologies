@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+    <link rel="stylesheet" href="passport.css">
+</head>
+<body>
+    <header>
+        <h1>Решение алгоритмической задачи</h1>
+    </header>
+    
+    <nav>
+       
+        <div style="margin: 20px;">
+            <button onclick="window.close()" class="button" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                ← Вернуться назад
+            </button>
+        </div>
+    </nav>
+    
+    <div class="algorithm_tasks">
+        <form action="https://yandex.com/search?" target="_blank" id="send-form" name="send-form">
+        <h3>РЕШЕНИЕ АЛГОРИТМИЧЕСКОЙ ЗАДАЧИ</h3>
+        <div class="task-content">
+            <div class="task-formula">
+                <h4>Задача:</h4>
+                <p id="task-text">Можно ли в квадратном зале площадью S поместить круглую сцену радиусом R, так чтобы от стены до сцены был проход не менее K?</p>
+                <h4>Формула для решения:</h4>
+                <p>Сторона квадратного зала: A = √S</p>
+                <p>Максимальный радиус сцены: R<sub>max</sub> = (A - 2K) / 2</p>
+                <p>Условие: R ≤ R<sub>max</sub></p>
+
+                <input type="hidden" id="condition" name="condition" value="Можно ли в квадратном зале площадью S поместить круглую сцену радиусом R, так чтобы от стены до сцены был проход не менее K?">
+            </div>
+            
+            <div class="input-section">
+                <label for="area">Площадь зала (S):</label>
+                <input type="number" id="area" name="area" step="any" min="0" placeholder="Введите площадь">
+                
+                <label for="radius">Радиус сцены (R):</label>
+                <input type="number" id="radius" name="radius" step="any" min="0" placeholder="Введите радиус">
+                
+                <label for="passage">Минимальный проход (K):</label>
+                <input type="number" id="passage" name="passage" step="any" min="0" placeholder="Введите проход">
+                
+                <button type="button" class="button" id="calculate-btn">Проверить возможность</button>
+            </div>
+            
+            <div class="result-section" id="result">
+                <h4>Результат:</h4>
+                <p>Введите данные и нажмите кнопку для расчета</p>
+            </div>
+
+            <input type="hidden" id="result_hidden" name="result">
+
+            <div style="margin-top: 16px;">
+                <button type="submit" id="send-btn">Отправить на удалённый сервер</button>
+            </div>
+        </div>
+        <script src="tasks.js"></script>
+        </form>
+    </div>
+        
+        
