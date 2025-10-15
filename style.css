@@ -155,9 +155,3 @@ body {
 .logo:hover img {
   transform: scale(1.05);   
 }
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
