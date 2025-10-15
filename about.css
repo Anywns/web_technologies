@@ -45,7 +45,7 @@
     height: 100px; 
     text-align: center;
     padding: 15px;
-    background-image: url(background_first_row.jpg);
+    background-image: url('background_first_row.jpg');
     background-size: contain;
     
 }
