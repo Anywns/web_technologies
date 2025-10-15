@@ -263,3 +263,21 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(255, 210, 127, 0.3);
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;       
+  text-decoration: none;
+}
+
+.logo img {
+  width: 60px;             
+  height: auto;
+  border-radius: 8px;      
+  transition: transform 0.2s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);   
+}
