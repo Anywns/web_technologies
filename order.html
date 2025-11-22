@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>order</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     
     <link rel="stylesheet" href="order.css">
     
@@ -28,11 +33,18 @@
         </header> 
     </div>    
 
+    <!-- Внутренняя навигация по странице -->
+    <nav class="page-nav">
+        <a href="#form1">Форма 1</a>
+        <a href="#form2">Форма 2</a>
+        <a href="#product-selection">Выбор товара</a>
+        
+    </nav>
+
     <main class="forms">
         <div class="form_container">
 
-        <div class="form_1">
-
+        <div class="form_1" id="form1">
             <h3>ЛИЧНАЯ ИНФОРМАЦИЯ</h3>
             <p>(форма для отправки личных контактных данных)</p>
             <form action="https://yandex.com/search?" target="_blank" id="data" name="data">
@@ -73,7 +85,7 @@
             
         </div>
 
-        <div class="form_2">
+        <div class="form_2" id="form2">
             <h3>ОФОРМЛЕНИЕ ЗАКАЗА ТУРА</h3>
             <p class="f2title">(форма для отправки оригинальных данных)</p>
             <form action="https://yandex.com/search?" target="_blank" id="data" name="data">
@@ -133,7 +145,52 @@
         </div>
 
         </div>
+
+        <!-- Секция выбора товара с повторяющимися блоками -->
+        <section class="product-selection" id="product-selection">
+            <h3>ВЫБОР ТУРОВ И УСЛУГ</h3>
+            <p>Выберите подходящие туры и дополнительные услуги</p>
+            
+            <div class="products-container">
+                <div class="product-category">
+                    <h4>Популярные туры</h4>
+                    <div class="products-grid" id="tours-grid">
+                        <!-- Блоки будут добавлены через JS -->
+                    </div>
+                </div>
+                
+                <div class="product-category">
+                    <h4>Дополнительные услуги</h4>
+                    <div class="products-grid" id="services-grid">
+                        <!-- Блоки будут добавлены через JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Корзина -->
+            <div class="cart-section">
+                <h4>Ваша корзина</h4>
+                <div class="cart-items" id="cart-items">
+                    <p>Корзина пуста</p>
+                </div>
+                <div class="cart-total">
+                    <strong>Итого: <span id="cart-total">0</span> руб.</strong>
+                </div>
+                <form action="https://yandex.com/search?" target="_blank" id="cart-form" method="get">
+                    <input type="hidden" name="cart_data" id="cart-data">
+                    <button type="submit" class="cart-submit-btn" disabled>Отправить заказ</button>
+                </form>
+            </div>
+        </section>
     </main>
-    
+
+    <!-- Кнопка вернуться наверх -->
+    <a href="#" class="back-to-top fixed">Вернуться наверх</a>
+
+    <script src="order_products.js"></script>
+    <script src="order_navigation.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
