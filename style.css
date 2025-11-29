@@ -16,60 +16,39 @@ body {
   background-position: center;
   min-height: 100vh;
   position: relative;
-  
 }
 
-.site_header {
-  padding-top: 30px;
+/* Адаптивные стили для навбара */
+.navbar {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
 }
 
-.container {
-  width:  1400px;
-  margin: 0 auto;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; 
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 25px; 
-  align-items: center;
-}
-
-.menu li a {
-  color: rgba(255, 255, 255, 0.95);
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.95) !important;
   text-decoration: none;
   font-size: 18px;
-  padding: 12px 24px;
+  padding: 12px 24px !important;
   transition: all 0.3s ease;
   border-radius: 25px;
-  display: inline-block;
   background: rgba(255, 255, 255, 0.1);
+  margin: 5px 5px;
+  text-align: center;
 }
 
-.menu li a:hover {
-  color: #ffd27f;
+.navbar-nav .nav-link:hover {
+  color: #ffd27f !important;
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.menu li.active a{
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffd27f;
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffd27f !important;
   font-weight: 600;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.menu li.active a:hover {
-  transform: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffd27f;
 }
 
 .hero {
@@ -90,7 +69,7 @@ body {
 
 .hero_title {
   font-weight: 700;
-  font-size: 100px;
+  font-size: clamp(3rem, 8vw, 6rem);
   line-height: 0.9;
   letter-spacing: 6px;
   margin-bottom: 8px;
@@ -99,34 +78,31 @@ body {
 }
 
 .hero_sub {
-  font-size: 28px;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   margin-bottom: 8px;
   opacity: 0.95;
   text-shadow: 0 3px 20px rgba(0, 0, 0, 0.55);
 }
 
 .info_btn, .choose_btn {
-  position: absolute;
-  bottom: 100px;
   padding: 14px 26px;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
   background: rgba(255, 255, 255, 0.1);
   color: #111;
-  border: 1px solid rgba(255, 255, 255, 0.06)
-  
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .info_btn {
-  left: 70px;
   background:  #878984;
   color: #111;
   font-size: 16px;
 }
 
 .choose_btn {
-  right: 40px;
   background: #878984;
   color: #111;
   font-size: 20px;
@@ -137,22 +113,39 @@ body {
   background: rgba(255, 255, 255, 0.50);
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.logo {
-  display: flex;
-  align-items: center;
-  margin-right: auto;       
+  color: #111;
   text-decoration: none;
 }
 
-.logo img {
-  width: 60px;             
-  height: auto;
+.navbar-brand img {
   border-radius: 8px;      
   transition: transform 0.2s ease;
 }
 
-.logo:hover img {
+.navbar-brand:hover img {
   transform: scale(1.05);   
 }
 
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 10px 20px !important;
+    font-size: 16px;
+    margin: 2px 0;
+  }
+  
+  .info_btn, .choose_btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .choose_btn {
+    font-size: 16px;
+  }
+}

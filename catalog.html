@@ -5,156 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>catalog</title>
 
-       <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="catalog.css">
-
 </head>
 
 <body>
     <div class="wrapper">
+        <!-- Адаптивная навигационная панель Bootstrap -->
         <header class="site_header">
-            <div class="container">
-                <nav class="nav">
-                    <a class="logo" href="https://t.me/anywns" target="_blank" rel="noopener noreferrer" aria-label="Перейти на внешний сайт">
-                       <img src="img/tg.png" alt="Логотип сайта" width="72" height="72">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                    <!-- Логотип -->
+                    <a class="navbar-brand" href="https://t.me/anywns" target="_blank">
+                        <img src="img/tg.png" alt="Логотип сайта" width="60" height="60" class="d-inline-block align-top rounded">
                     </a>
-                    <ul class="menu">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="about.html">О нас</a></li>
-                        <li class="active"><a href="catalog.html">Каталог</a></li>
-                        <li><a href="order.html">Заказ</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
+                    
+                    <!-- Кнопка-гамбургер для мобильных устройств -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <!-- Элементы меню -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="catalog.html">Каталог</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html">Заказ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
 
         <section class="catalog_hero">
-            <div class="catalog_hero_content">
+            <div class="container text-center">
                 <h1 class="catalog_title">ОТКРОЙ МИР С НАМИ!</h1>
                 <p class="catalog_subtitle">изучи все направления и найди то, которое подходит именно тебе</p>
             </div>
             
-            <div class="destination_cards">
-                <a href="#sochi" class="destination_card">
-                    <img src="img/сочи.png" alt="Сочи">
-                    <h3>СОЧИ</h3>
-                </a>
-                <a href="#baikal" class="destination_card">
-                    <img src="baikal.png" alt="Байкал">
-                    <h3>БАЙКАЛ</h3>
-                </a>
-                <a href="#altai" class="destination_card">
-                    <img src="altai.png" alt="Алтай">
-                    <h3>АЛТАЙ</h3>
-                </a>
+            <div class="container">
+                <div class="destination_cards">
+                    <a href="#sochi" class="destination_card">
+                        <img src="img/сочи.png" alt="Сочи" class="img-fluid">
+                        <h3>СОЧИ</h3>
+                    </a>
+                    <a href="#baikal" class="destination_card">
+                        <img src="baikal.png" alt="Байкал" class="img-fluid">
+                        <h3>БАЙКАЛ</h3>
+                    </a>
+                    <a href="#altai" class="destination_card">
+                        <img src="altai.png" alt="Алтай" class="img-fluid">
+                        <h3>АЛТАЙ</h3>
+                    </a>
+                </div>
             </div>
         </section>
 
         <section class="destination_detail" id="sochi">
-            <div class="detail_content">
-                <h2 class="detail_title">СОЧИ</h2>
-                <p class="detail_description">
-                    Сочи — это современный курорт, где сочетаются морской бриз, горные вершины и богатая инфраструктура. 
-                    Тур подойдёт для тех, кто хочет совместить пляжный отдых, прогулки и активные развлечения.
-                </p>
-                
-                <div class="detail_grid">
-                    <div class="detail_box">
-                        <h3>Основные активности</h3>
-                        <ul>
-                            <li>Купание и отдых на пляжах Чёрного моря</li>
-                            <li>Прогулка в Олимпийский парк</li>
-                            <li>Поездка на Красную Поляну</li>
-                            <li>Дополнительные развлечения:
-                                <ul type="circle"> 
-                                    <li>Аквапарк "Анфибиус"</li>
-                                    <li>Подъем на канатной дороге к вершине Аибги</li>
-                                    <li>Парк Ривьера и морская прогулка</li>
-                                </ul>
-                        </ul>
-                    </div>
+            <div class="container">
+                <div class="detail_content">
+                    <h2 class="detail_title">СОЧИ</h2>
+                    <p class="detail_description">
+                        Сочи — это современный курорт, где сочетаются морской бриз, горные вершины и богатая инфраструктура. 
+                        Тур подойдёт для тех, кто хочет совместить пляжный отдых, прогулки и активные развлечения.
+                    </p>
                     
-                    <div class="detail_box">
-                        <h3>Программа по дням</h3>
-                        <ol>
-                            <li>Заселение в отель и прогулка по набережной</li>
-                            <li>Посещение Олимпийского парка</li>
-                            <li>Экскурсия на Красную Поляну</li>
-                            <li>Свободный день на пляже</li>
-                            <li>Свободное время + вечерний концерт</li>
-                            <li>Отъезд домой</li>
-                        </ol>
+                    <div class="detail_grid">
+                        <div class="detail_box">
+                            <h3>Основные активности</h3>
+                            <ul>
+                                <li>Купание и отдых на пляжах Чёрного моря</li>
+                                <li>Прогулка в Олимпийский парк</li>
+                                <li>Поездка на Красную Поляну</li>
+                                <li>Дополнительные развлечения:
+                                    <ul type="circle"> 
+                                        <li>Аквапарк "Анфибиус"</li>
+                                        <li>Подъем на канатной дороге к вершине Аибги</li>
+                                        <li>Парк Ривьера и морская прогулка</li>
+                                    </ul>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail_box">
+                            <h3>Программа по дням</h3>
+                            <ol>
+                                <li>Заселение в отель и прогулка по набережной</li>
+                                <li>Посещение Олимпийского парка</li>
+                                <li>Экскурсия на Красную Поляну</li>
+                                <li>Свободный день на пляже</li>
+                                <li>Свободное время + вечерний концерт</li>
+                                <li>Отъезд домой</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="destination_detail" id="baikal">
-            <div class="detail_content">
-                <h2 class="detail_title">БАЙКАЛ</h2>
-                <p class="detail_description">
-                    Путешествие на Байкал — это возможность увидеть одно из самых глубоких и чистых озёр мира. 
-                    Тур идеально подходит для любителей природы, спокойствия и загадочных пейзажей Восточной Сибири.
-                </p>
-                
-                <div class="detail_grid">
-                    <div class="detail_box">
-                        <h3>Основные активности</h3>
-                        <ul>
-                            <li>Остров Ольхон — духовный центр Байкала</li>
-                            <li>Посёлок Листвянка и Байкальский музей</li>
-                            <li>Скала Шаманка — священное место бурятских легенд</li>
-                        </ul>
-                    </div>
+            <div class="container">
+                <div class="detail_content">
+                    <h2 class="detail_title">БАЙКАЛ</h2>
+                    <p class="detail_description">
+                        Путешествие на Байкал — это возможность увидеть одно из самых глубоких и чистых озёр мира. 
+                        Тур идеально подходит для любителей природы, спокойствия и загадочных пейзажей Восточной Сибири.
+                    </p>
                     
-                    <div class="detail_box">
-                        <h3>Что вас ждет</h3>
-                        <ol type="a">
-                            <li>Переезд в Иркутска к озеру (около 2 часов)</li>
-                            <li>Экскурсия по побережью и прогулка на катере</li>
-                            <li>Посещение горячих источников в Хакусах</li>
-                            <li>Свободное время для купания и отдыха на берегу</li>
-                        </ol>
+                    <div class="detail_grid">
+                        <div class="detail_box">
+                            <h3>Основные активности</h3>
+                            <ul>
+                                <li>Остров Ольхон — духовный центр Байкала</li>
+                                <li>Посёлок Листвянка и Байкальский музей</li>
+                                <li>Скала Шаманка — священное место бурятских легенд</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail_box">
+                            <h3>Что вас ждет</h3>
+                            <ol type="a">
+                                <li>Переезд в Иркутска к озеру (около 2 часов)</li>
+                                <li>Экскурсия по побережью и прогулка на катере</li>
+                                <li>Посещение горячих источников в Хакусах</li>
+                                <li>Свободное время для купания и отдыха на берегу</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="destination_detail" id="altai">
-            <div class="detail_content">
-                <h2 class="detail_title">АЛТАЙ</h2>
-                <p class="detail_description">
-                    Алтай — это край могучих гор, прозрачных рек и бескрайних лугов. Этот тур подойдёт тем, 
-                    кто мечтает о приключениях и активном отдыхе вдали от цивилизации.
-                </p>
-                
-                <div class="detail_grid">
-                    <div class="detail_box">
-                        <h3>Что вас ждет</h3>
-                        <ul type="square">
-                            <li>Проживание в эко-отелях и палаточных лагерях</li>
-                            <li>Треккинг по горным тропам</li>
-                            <li>Трехразовое питание</li>
-                            <li>Транспортное сопровождение</li>
-                            <li>Поход к водопаду Учар</li>
-                            <li>Катание на лошадях по горным тропам</li>
-                            <li>Посещение пасеки и дегустация меда</li>
-                        </ul>
-                    </div>
+            <div class="container">
+                <div class="detail_content">
+                    <h2 class="detail_title">АЛТАЙ</h2>
+                    <p class="detail_description">
+                        Алтай — это край могучих гор, прозрачных рек и бескрайних лугов. Этот тур подойдёт тем, 
+                        кто мечтает о приключениях и активном отдыхе вдали от цивилизации.
+                    </p>
                     
-                    <div class="detail_box">
-                        <h3>Маршрут путешествия</h3>
-                        <ol type="I">
-                            <li>Горно-Алтайск — старт маршрута и обзорная экскурсия по городу</li>
-                            <li>Долина реки Катунь — сплав на рафтах</li>
-                            <li>Чуйский тракт — самая живописная дорога России</li>
-                            <li>Телецкое озеро — жемчужина Алтая</li>
-                        </ol>
+                    <div class="detail_grid">
+                        <div class="detail_box">
+                            <h3>Что вас ждет</h3>
+                            <ul type="square">
+                                <li>Проживание в эко-отелях и палаточных лагерях</li>
+                                <li>Треккинг по горным тропам</li>
+                                <li>Трехразовое питание</li>
+                                <li>Транспортное сопровождение</li>
+                                <li>Поход к водопаду Учар</li>
+                                <li>Катание на лошадях по горным тропам</li>
+                                <li>Посещение пасеки и дегустация меда</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail_box">
+                            <h3>Маршрут путешествия</h3>
+                            <ol type="I">
+                                <li>Горно-Алтайск — старт маршрута и обзорная экскурсия по городу</li>
+                                <li>Долина реки Катунь — сплав на рафтах</li>
+                                <li>Чуйский тракт — самая живописная дорога России</li>
+                                <li>Телецкое озеро — жемчужина Алтая</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>

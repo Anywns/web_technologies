@@ -12,62 +12,6 @@ body {
   color: #fff;
 }
 
-.site_header {
-  padding-top: 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: transparent;
-  backdrop-filter: blur(10px);
-}
-
-.container {
-  width: 1400px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.menu li a {
-  color: rgba(255,255,255,0.95);
-  text-decoration: none;
-  font-size: 18px;
-  padding: 12px 24px;
-  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-  border-radius: 25px;
-  display: inline-block;
-  background: rgba(255,255,255,0.1);
-}
-
-.menu li a:hover {
-  color: #ffd27f;
-  background: rgba(255,255,255,0.2);
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.menu li.active a {
-  background: rgba(255,255,255,0.2);
-  color: #ffd27f;
-  font-weight: 600;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
 .forms {
   min-height: 100vh;
   padding: 150px 0 50px; 
@@ -94,7 +38,7 @@ body {
 .form_1 h3,
 .form_2 h3 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: #fff;
   text-align: center;
   margin-bottom: 5px;
@@ -231,24 +175,6 @@ body {
 
 .f2title { text-align: center; }
 
-.logo {
-  display: flex;
-  align-items: center;
-  margin-right: auto;       
-  text-decoration: none;
-}
-
-.logo img {
-  width: 60px;             
-  height: auto;
-  border-radius: 8px;      
-  transition: transform 0.2s ease;
-}
-
-.logo:hover img {
-  transform: scale(1.05);   
-}
-
 /* Стили для внутренней навигации */
 .page-nav {
     background: rgba(255, 255, 255, 0.1);
@@ -287,7 +213,7 @@ body {
 
 .product-selection h3 {
     text-align: center;
-    font-size: 32px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: 10px;
     color: #ffd27f;
 }
@@ -470,4 +396,90 @@ body {
 .back-to-top.fixed:hover {
     background: rgba(255, 210, 127, 0.4);
     transform: translateY(-5px);
+}
+
+/* Адаптивность для заказа */
+@media (max-width: 768px) {
+    .forms {
+        padding: 120px 0 30px;
+    }
+    
+    .form_container {
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .form_1,
+    .form_2 {
+        padding: 20px;
+    }
+    
+    .form_1 .group_1,
+    .form_1 .group_2 {
+        gap: 15px;
+    }
+    
+    .form_1 .group_1 > * {
+        min-width: 100%;
+    }
+    
+    .form_2 .dates {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .page-nav {
+        top: 100px;
+        padding: 10px 0;
+    }
+    
+    .page-nav a {
+        margin: 0 10px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .product-card {
+        padding: 20px;
+    }
+    
+    .cart-section {
+        padding: 20px;
+        margin-top: 30px;
+    }
+    
+    .back-to-top.fixed {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form_1 button,
+    .form_2 button,
+    .cart-submit-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    .product-selection {
+        margin: 30px auto;
+    }
+    
+    .product-category h4 {
+        font-size: 20px;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 }

@@ -12,53 +12,61 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
-
-
 </head>
 <body>
     <div class="wrapper">
+        <!-- Навигация -->
         <header class="site_header">
-        <div class="container">
-            <nav class="nav">
-                <a class="logo" href="https://t.me/anywns" target="_blank" rel="noopener noreferrer" aria-label="Перейти на внешний сайт">
-                  <img src="img/tg.png" alt="Логотип сайта" width="72" height="72">
-                </a>
-            <ul class="menu">
-                <li><a href="index.html">Главная</a></li>
-                <li class="active"><a href="about.html">О нас</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="order.html">Заказ</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="https://t.me/anywns" target="_blank">
+                        <img src="img/tg.png" alt="Логотип сайта" width="60" height="60" class="d-inline-block align-top rounded">
+                    </a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="about.html">О нас</a></li>
+                            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                            <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-        </div>
-        </header> 
-        <div class="table-container">
-            <table border="1" class="tbl">
-                <tr class="first_row">
-                    <td colspan="3" ><p>ТВОЕ ИДЕАЛЬНОЕ ПУТЕШЕСТВИЕ - <br> НАША РАБОТА</p></td>
-                </tr>
+        </header>
 
-                <tr class="info">
-                    <td>
-                        <p>более 3-х<br>лет<br>опыта</p>
-                    </td>
-                    <td>
-                        <p>только<br>проверенные<br>туры</p>
-                    </td>
-                    <td>
-                        <p>поддержка<br>от нас<br>24/7</p>
-                    </td>
-                </tr>
-                <tr class="more_info">
-                    <td colspan="3"> 
-                        <a href="https://ru.pinterest.com/pin/563018698489745/" target="_blank" class="info-link">подробная информация <span class="arrow">&rarr;</span></a>
-                        <a href="img/photo.jpg" target="_blank" class="preview-link"> 
-                                <img src="img/photo.jpg" alt="Превью" style="width: 50px; height: 50px; border-radius: 5px;">
-                        
-                    </td>
-                </tr>
-            </table>
+        <!-- Центрирование таблицы -->
+        <div class="table-center">
+            <div class="table-responsive">
+                <table border="1" class="tbl mx-auto">
+                    <tr class="first_row">
+                        <td colspan="3"><p>ТВОЕ ИДЕАЛЬНОЕ ПУТЕШЕСТВИЕ - <br> НАША РАБОТА</p></td>
+                    </tr>
+
+                    <tr class="info">
+                        <td><p>более 3-х<br>лет<br>опыта</p></td>
+                        <td><p>только<br>проверенные<br>туры</p></td>
+                        <td><p>поддержка<br>от нас<br>24/7</p></td>
+                    </tr>
+
+                    <tr class="more_info">
+                        <td colspan="3">
+                            <a href="https://ru.pinterest.com/pin/563018698489745/" target="_blank" class="info-link">
+                                подробная информация <span class="arrow">&rarr;</span>
+                            </a>
+
+                            <a href="img/photo.jpg" target="_blank" class="preview-link">
+                                <img src="img/photo.jpg" alt="Превью">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 
