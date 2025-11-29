@@ -79,7 +79,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Адаптивность для контактов */
 @media (max-width: 768px) {
   .contacts {
     padding: 100px 20px 40px;

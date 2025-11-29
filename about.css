@@ -22,7 +22,7 @@
     max-width: 900px;
     border-collapse: collapse;
     table-layout: fixed;
-    margin: 0 auto !important;
+    margin: 0 auto;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -120,7 +120,6 @@
     border-radius: 5px;
 }
 
-/* Адаптивность для маленьких экранов */
 @media (max-width: 768px) {
     .tbl {
         width: 95%;

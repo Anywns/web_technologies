@@ -175,7 +175,6 @@ body {
 
 .f2title { text-align: center; }
 
-/* Стили для внутренней навигации */
 .page-nav {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -204,7 +203,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Стили для секции выбора товаров */
 .product-selection {
     max-width: 1200px;
     margin: 50px auto;
@@ -299,7 +297,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Стили для корзины */
 .cart-section {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -375,7 +372,6 @@ body {
     cursor: not-allowed;
 }
 
-/* Кнопка вернуться наверх */
 .back-to-top.fixed {
     position: fixed;
     bottom: 40px;
@@ -398,7 +394,6 @@ body {
     transform: translateY(-5px);
 }
 
-/* Адаптивность для заказа */
 @media (max-width: 768px) {
     .forms {
         padding: 120px 0 30px;
