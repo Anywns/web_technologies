@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Montserrat Alternates', sans-serif;
-  background: linear-gradient(135deg, #8B8D89 0%, #262726 100%);
+  /* background: linear-gradient(135deg, #8B8D89 0%, #262726 100%); */
   color: #fff;
 }
 
@@ -93,6 +93,7 @@ body {
   box-sizing: border-box;
 }
 
+/* цвет подсказок */
 .form_1 input::placeholder,
 .form_2 input::placeholder,
 .form_2 textarea::placeholder {
@@ -145,6 +146,11 @@ body {
 .form_2 input[type="checkbox"] {
   width: auto;
   margin-bottom: 0;
+}
+
+.form-check-input:checked {
+    background-color: #ffd27f;
+    border-color: #ffd27f;
 }
 
 .form_1 button,
@@ -238,7 +244,7 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
 }
 
@@ -251,6 +257,9 @@ body {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    max-width: 350px; 
+    margin: 0 auto; 
+    width: 100%;
 }
 
 .product-card:hover {
@@ -392,6 +401,47 @@ body {
 .back-to-top.fixed:hover {
     background: rgba(255, 210, 127, 0.4);
     transform: translateY(-5px);
+}
+
+/* для блока с картинками */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Чтобы картинка не выходила за границы */
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 20px;
+    flex-grow: 1; /* Чтобы контент занимал оставшееся пространство */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card h5 {
+    margin-top: 0;
+}
+
+.product-card .description {
+    flex-grow: 1;
+    margin-bottom: 15px;
 }
 
 @media (max-width: 768px) {

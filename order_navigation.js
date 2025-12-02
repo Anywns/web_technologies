@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Обработка кнопки "Вернуться наверх" в правом углу
+    // Обработка кнопки "Вернуться наверх"
     const backToTopBtn = document.querySelector('.back-to-top.fixed');
     
     if (backToTopBtn) {
@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Показ/скрытие кнопки при скролле
         window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
+            if (window.pageYOffset > 300) { //если прокрутили больше 300, то показываем кнопку
                 backToTopBtn.style.display = 'block';
-            } else {
+            } else { // иначе - скрываем
                 backToTopBtn.style.display = 'none';
             }
         });

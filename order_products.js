@@ -4,37 +4,43 @@ const toursData = [
         id: 1,
         name: "Сочи - Премиум",
         description: "7 дней на берегу Черного моря с экскурсиями в Олимпийский парк и Красную Поляну",
-        price: 45000
+        price: 45000,
+        image: "sochi-tour.png"
     },
     {
         id: 2,
         name: "Байкал - Экспедиция",
         description: "5-дневное путешествие по священному озеру с посещением острова Ольхон",
-        price: 35000
+        price: 35000,
+        image: "baikal-tour.png"
     },
     {
         id: 3,
         name: "Алтай - Приключение",
         description: "6 дней в горах Алтая с треккингом, рафтингом и конными прогулками",
-        price: 28000
+        price: 28000,
+        image: "altai-tour.png"
     },
     {
         id: 4,
         name: "Крым - Ретро тур",
         description: "8 дней по историческим местам Крыма с дегустацией местных вин",
-        price: 32000
+        price: 32000,
+        image: "crimea-tour.png"
     },
     {
         id: 5,
         name: "Карелия - Северная сказка",
         description: "4 дня среди озер и водопадов с посещением горного парка Рускеала",
-        price: 22000
+        price: 22000,
+        image: "karelia-tour.png"
     },
     {
         id: 6,
         name: "Золотое кольцо - Классика",
         description: "3-дневный тур по древним городам России с богатой историей",
-        price: 18000
+        price: 18000,
+        image: "r-tour.png"
     }
 ];
 
@@ -77,9 +83,9 @@ const servicesData = [
     }
 ];
 
-let cart = [];
+let cart = []; // массиы для хранения товаров в корзине
 
-// Инициализация при загрузке страницы
+// Инициализация при загрузке страницы - вызывается две функции 
 document.addEventListener('DOMContentLoaded', function() {
     renderProducts();
     updateCart();
@@ -87,11 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Рендеринг товаров
 function renderProducts() {
-    const toursGrid = document.getElementById('tours-grid');
-    const servicesGrid = document.getElementById('services-grid');
+    const toursGrid = document.getElementById('tours-grid'); // находит элемент с id="tours-grid" (для туров)
+    const servicesGrid = document.getElementById('services-grid'); // Находит элемент для услуг
 
     // Рендерим туры
-    toursData.forEach(tour => {
+    toursData.forEach(tour => { // для каждого тура: создает карточку и добавляет в toursGrid
         toursGrid.appendChild(createProductCard(tour, 'tour'));
     });
 
@@ -105,20 +111,34 @@ function renderProducts() {
 function createProductCard(product, type) {
     const card = document.createElement('div');
     card.className = 'product-card';
+    
+    // Проверяем, есть ли фото (только у туров)
+    const hasImage = product.image && type === 'tour';
+    
+    // Создаем HTML в зависимости от наличия фото
     card.innerHTML = `
-        <h5>${product.name}</h5>
-        <p class="description">${product.description}</p>
-        <div class="price">${product.price.toLocaleString()} руб.</div>
-        <button class="add-to-cart-btn" onclick="addToCart(${product.id}, '${type}')">
-            Добавить в корзину
-        </button>
+        ${hasImage ? `
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+        ` : ''}
+        
+        <div class="product-content ${hasImage ? 'with-image' : 'without-image'}">
+            <h5>${product.name}</h5>
+            <p class="description">${product.description}</p>
+            <div class="price">${product.price.toLocaleString()} руб.</div>
+            <button class="add-to-cart-btn" onclick="addToCart(${product.id}, '${type}')">
+                Добавить в корзину
+            </button>
+        </div>
     `;
+    
     return card;
 }
 
 // Добавление в корзину
 function addToCart(productId, type) {
-    const products = type === 'tour' ? toursData : servicesData;
+    const products = type === 'tour' ? toursData : servicesData; // если type === 'tour', то products = toursData, иначе servicesData
     const product = products.find(p => p.id === productId);
     
     if (product) {
@@ -126,17 +146,20 @@ function addToCart(productId, type) {
             ...product,
             type: type
         });
-        updateCart();
+        updateCart(); // обновляет отображение корзины
         
         // Анимация добавления
-        const button = event.target;
-        button.textContent = 'Добавлено!';
-        button.style.background = 'rgba(76, 175, 80, 0.3)';
-        setTimeout(() => {
-            button.textContent = 'Добавить в корзину';
-            button.style.background = '';
-        }, 1500);
-    }
+        const button = window.event ? window.event.target : null;
+        
+        if (button && button.classList.contains('add-to-cart-btn')) {
+            button.textContent = 'Добавлено!';
+            button.style.background = 'rgba(76, 175, 80, 0.3)';
+            setTimeout(() => {
+                button.textContent = 'Добавить в корзину';
+                button.style.background = '';
+            }, 1500);
+        }
+    }    
 }
 
 // Обновление корзины
@@ -169,6 +192,7 @@ function updateCart() {
         cartItems.appendChild(cartItem);
     });
 
+    // Добавляем элемент в блок корзины
     cartTotal.textContent = total.toLocaleString();
     submitBtn.disabled = false;
     
@@ -189,7 +213,7 @@ function updateCart() {
 
 // Удаление из корзины
 function removeFromCart(index) {
-    cart.splice(index, 1);
+    cart.splice(index, 1); // .splice(index, 1) — удаляет 1 элемент из массива cart на позиции index
     updateCart();
 }
 
